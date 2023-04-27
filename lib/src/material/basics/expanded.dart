@@ -17,12 +17,12 @@ class ExpandedBase extends _$ExpandedBase {
     acceptHeight: 100,
     defaultValue: 'Placeholder',
   )
-  Widget child;
-  int flex;
-  Key key;
+  late Widget child;
+  int? flex;
+  Key? key;
 
   @override
-  final Map<String, dynamic> widgetData;
+  late final Map<String, dynamic> widgetData;
 
   @override
   final WidgetContext widgetContext;
