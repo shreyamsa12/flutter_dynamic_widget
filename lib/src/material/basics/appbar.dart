@@ -13,18 +13,18 @@ part 'appbar.g.dart';
 class AppBarBase extends _$AppBarBase {
   AppBarBase(this.widgetData, this.widgetContext, this.widgetRender);
 
-  List<Widget> actions;
-  Color backgroundColor;
-  Widget bottom;
+  late List<Widget> actions;
+  late Color backgroundColor;
+  late Widget bottom;
   @enumBrightness
-  Brightness brightness;
+  late Brightness brightness;
 
-  bool centerTitle;
-  double elevation;
-  Widget flexibleSpace;
-  Key key;
-  Color shadowColor;
-  ShapeBorder shape;
+  late bool centerTitle;
+  late double elevation;
+  late Widget flexibleSpace;
+  late Key key;
+  late Color shadowColor;
+  late ShapeBorder shape;
 
   @override
   final Map<String, dynamic> widgetData;
@@ -39,35 +39,35 @@ class AppBarBase extends _$AppBarBase {
   get onAction => (context, val) => MaterialBase.onAction(context, val);
 
   @SupportedKey()
-  IconThemeDataBase actionsIconTheme;
+  late IconThemeDataBase actionsIconTheme;
 
   @SupportedKey()
-  IconThemeDataBase iconTheme;
+  late IconThemeDataBase iconTheme;
 
   @WidgetKey.widget()
-  Widget leading;
+  late Widget leading;
 
   @SupportedKey()
-  TextThemeBase textTheme;
+  late TextThemeBase textTheme;
 
   @WidgetKey.widget(acceptWidth: 100)
-  Widget title;
+  late Widget title;
 
   @PropertyKey(defaultValue: 'true')
-  bool automaticallyImplyLeading;
+  late bool automaticallyImplyLeading;
 
   @PropertyKey(defaultValue: 'true')
-  bool primary;
+  late bool primary;
 
   @PropertyKey(defaultValue: '16.0')
-  double titleSpacing;
+  late double titleSpacing;
 
   @PropertyKey(defaultValue: '1.0')
-  double toolbarOpacity;
+  late double toolbarOpacity;
 
   @PropertyKey(defaultValue: '1.0')
-  double bottomOpacity;
+  late double bottomOpacity;
 
   @PropertyKey(defaultValue: 'false')
-  bool excludeHeaderSemantics;
+  late bool excludeHeaderSemantics;
 }

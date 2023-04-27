@@ -58,7 +58,7 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
       };
 
   final _actionsListen = ValueNotifier<bool>(false);
-  List<WidgetBase> get actionsVal {
+  List<WidgetBase>? get actionsVal {
     if (params[actionsKey] != null) {
       final _children = <WidgetBase>[];
       final _list = List.from(params[actionsKey]);
@@ -80,9 +80,9 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
     widgetContext.onUpdate(id, widgetData);
   }
 
-  Color get backgroundColorVal {
+  Color? get backgroundColorVal {
     if (params[backgroundColorKey] != null) {
-      int _value = null;
+      int? _value = null;
       String description = params[backgroundColorKey].toString();
       if (description.startsWith('#')) {
         description = description.replaceAll('#Color(', '').replaceAll(')', '');
@@ -101,12 +101,12 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
     return null;
   }
 
-  set backgroundColorVal(Color val) {
-    params[backgroundColorKey] = "#Color(${val.value})";
+  set backgroundColorVal(Color? val) {
+    params[backgroundColorKey] = "#Color(${val!.value})";
     widgetContext.onUpdate(id, widgetData);
   }
 
-  WidgetBase get bottomVal {
+  WidgetBase? get bottomVal {
     if (params[bottomKey] != null) {
       return widgetRender(widgetContext, params[bottomKey]);
     }
@@ -131,47 +131,47 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
         Brightness.dark,
       ];
 
-  Brightness get brightnessVal {
+  Brightness? get brightnessVal {
     if (params[brightnessKey] != null) {
       final _value = params[brightnessKey].toString().replaceAll('#', '');
       return brightnessValues.firstWhere(
         (element) => element.toString() == _value,
-        orElse: () => null,
+        orElse: () => Brightness.light,
       );
     }
     return null;
   }
 
-  set brightnessVal(Brightness val) {
+  set brightnessVal(Brightness? val) {
     params[brightnessKey] = "$val";
     widgetContext.onUpdate(id, widgetData);
   }
 
-  bool get centerTitleVal {
+  bool? get centerTitleVal {
     if (params[centerTitleKey] != null) {
       return params[centerTitleKey] as bool;
     }
-    return null;
+    return false;
   }
 
-  set centerTitleVal(bool val) {
+  set centerTitleVal(bool? val) {
     params[centerTitleKey] = val;
     widgetContext.onUpdate(id, widgetData);
   }
 
-  double get elevationVal {
+  double? get elevationVal {
     if (params[elevationKey] != null) {
       return params[elevationKey] as double;
     }
     return null;
   }
 
-  set elevationVal(double val) {
+  set elevationVal(double? val) {
     params[elevationKey] = val;
     widgetContext.onUpdate(id, widgetData);
   }
 
-  WidgetBase get flexibleSpaceVal {
+  WidgetBase? get flexibleSpaceVal {
     if (params[flexibleSpaceKey] != null) {
       return widgetRender(widgetContext, params[flexibleSpaceKey]);
     }
@@ -191,7 +191,7 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
     widgetContext.onUpdate(id, widgetData);
   }
 
-  Key get keyVal {
+  Key? get keyVal {
     if (params[keyKey] != null) {
       String _val = params[keyKey].toString();
       if (_val.startsWith('#')) {
@@ -208,7 +208,7 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
     return null;
   }
 
-  set keyVal(Key val) {
+  set keyVal(Key? val) {
     if (val == null) {
       params[keyKey] = null;
     } else {
@@ -217,9 +217,9 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
     widgetContext.onUpdate(id, widgetData);
   }
 
-  Color get shadowColorVal {
+  Color? get shadowColorVal {
     if (params[shadowColorKey] != null) {
-      int _value = null;
+      int? _value = null;
       String description = params[shadowColorKey].toString();
       if (description.startsWith('#')) {
         description = description.replaceAll('#Color(', '').replaceAll(')', '');
@@ -238,12 +238,12 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
     return null;
   }
 
-  set shadowColorVal(Color val) {
-    params[shadowColorKey] = "#Color(${val.value})";
+  set shadowColorVal(Color? val) {
+    params[shadowColorKey] = "#Color(${val!.value})";
     widgetContext.onUpdate(id, widgetData);
   }
 
-  IconThemeDataBase get actionsIconThemeVal {
+  IconThemeDataBase? get actionsIconThemeVal {
     if (params[actionsIconThemeKey] != null) {
       return IconThemeDataBase(
           params[actionsIconThemeKey], widgetContext, widgetRender);
@@ -251,12 +251,12 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
     return null;
   }
 
-  set actionsIconThemeVal(IconThemeDataBase val) {
+  set actionsIconThemeVal(IconThemeDataBase? val) {
     params[actionsIconThemeKey] = val;
     widgetContext.onUpdate(id, widgetData);
   }
 
-  IconThemeDataBase get iconThemeVal {
+  IconThemeDataBase? get iconThemeVal {
     if (params[iconThemeKey] != null) {
       return IconThemeDataBase(
           params[iconThemeKey], widgetContext, widgetRender);
@@ -264,13 +264,13 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
     return null;
   }
 
-  set iconThemeVal(IconThemeDataBase val) {
+  set iconThemeVal(IconThemeDataBase? val) {
     params[iconThemeKey] = val;
     widgetContext.onUpdate(id, widgetData);
   }
 
   final _leadingListen = ValueNotifier<bool>(false);
-  WidgetBase get leadingVal {
+  WidgetBase? get leadingVal {
     if (params[leadingKey] != null) {
       return widgetRender(widgetContext, params[leadingKey]);
     }
@@ -290,20 +290,20 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
     widgetContext.onUpdate(id, widgetData);
   }
 
-  TextThemeBase get textThemeVal {
+  TextThemeBase? get textThemeVal {
     if (params[textThemeKey] != null) {
       return TextThemeBase(params[textThemeKey], widgetContext, widgetRender);
     }
     return null;
   }
 
-  set textThemeVal(TextThemeBase val) {
+  set textThemeVal(TextThemeBase? val) {
     params[textThemeKey] = val;
     widgetContext.onUpdate(id, widgetData);
   }
 
   final _titleListen = ValueNotifier<bool>(false);
-  WidgetBase get titleVal {
+  WidgetBase? get titleVal {
     if (params[titleKey] != null) {
       return widgetRender(widgetContext, params[titleKey]);
     }
@@ -406,13 +406,14 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
               ? []
               : [
                   if (actionsVal != null)
-                    for (final item in actionsVal) item.build(context),
+                    for (final item in actionsVal!)
+                      item.build(context) as Widget,
                   if (widgetContext.isDragging)
                     DragTarget<WidgetBaseData>(
                       onAccept: (val) {
                         _actionsListen.value = false;
                         if (val != null) {
-                          actionsValUpdate(val?.data);
+                          actionsValUpdate(val.data);
                         }
                       },
                       onLeave: (val) {
@@ -437,17 +438,18 @@ abstract class _$AppBarBase extends WidgetPreferredSizedBase {
                       },
                     ),
                 ],
-          actionsIconTheme: actionsIconThemeVal?.build(context),
+          actionsIconTheme:
+              actionsIconThemeVal?.build(context) as IconThemeData?,
           automaticallyImplyLeading: automaticallyImplyLeadingVal,
           backgroundColor: backgroundColorVal,
-          bottom: bottomVal?.build(context),
+          bottom: bottomVal?.build(context) as PreferredSizeWidget?,
           bottomOpacity: bottomOpacityVal,
           brightness: brightnessVal,
           centerTitle: centerTitleVal,
           elevation: elevationVal,
           excludeHeaderSemantics: excludeHeaderSemanticsVal,
-          flexibleSpace: flexibleSpaceVal?.build(context),
-          iconTheme: iconThemeVal?.build(context),
+          flexibleSpace: flexibleSpaceVal?.build(context) as Widget?,
+          iconTheme: iconThemeVal?.build(context) as IconThemeData?,
           key: keyVal,
           leading: !widgetContext.isDragging ||
                   (widgetContext.isDragging &&

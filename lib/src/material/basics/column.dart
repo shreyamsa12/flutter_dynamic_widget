@@ -12,35 +12,35 @@ class ColumnBase extends _$ColumnBase {
   ColumnBase(this.widgetData, this.widgetContext, this.widgetRender);
 
   List<Widget> children;
-  Key key;
+  Key? key;
 
   @override
   final Map<String, dynamic> widgetData;
 
   @override
-  final WidgetContext widgetContext;
+  late final WidgetContext widgetContext;
 
   @override
-  final GenerateWidget widgetRender;
+  late final GenerateWidget widgetRender;
 
   @override
   get onAction => (context, val) => MaterialBase.onAction(context, val);
 
   @enumMainAxisSize
-  MainAxisSize mainAxisSize;
+  late MainAxisSize mainAxisSize;
 
   @enumTextBaseline
-  TextBaseline textBaseline;
+  late TextBaseline textBaseline;
 
   @enumTextDirection
-  TextDirection textDirection;
+  late TextDirection textDirection;
 
   @enumMainAxisAlignment
-  MainAxisAlignment mainAxisAlignment;
+  late MainAxisAlignment mainAxisAlignment;
 
   @enumCrossAxisAlignment
-  CrossAxisAlignment crossAxisAlignment;
+  late CrossAxisAlignment crossAxisAlignment;
 
   @enumVerticalDirection
-  VerticalDirection verticalDirection;
+  late VerticalDirection verticalDirection;
 }
